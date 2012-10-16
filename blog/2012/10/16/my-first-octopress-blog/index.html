@@ -1,11 +1,145 @@
-﻿---
-layout: default
-single: true
----
 
-<article class="post">
-	<h1 class="title">Github上搭建Octopress博客</h1>
-	<div class="entry-content"><p>本文将详细介绍如何在Windows系统下搭建博客，并发布到GitHub Pages上，以及后期博客发布后的更新工作&#8230;.</p>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Github上搭建博客 - 午饭</title>
+	<meta name="author" content="sunfanwu">
+
+	
+	<meta name="description" content="Github上搭建博客 Oct 16th, 2012 ">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="午饭" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">午饭</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:sunfanwu.github.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="github" href="https://github.com/sunfanwu" title="github">github</a>
+			<a class="twitter" href="http://weibo.com/sunfanwu" title="新浪微博">新浪微博</a>
+			<a class="facebook" href="http://www.renren.com/246917443" title="人人网">人人网</a>
+			<a class="pinterest" href="http://t.qq.com/ZTO-orz" title="腾讯微博">腾讯微博</a>
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:sunfanwu.github.com">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h1 class="title">顶级域名下的第一篇博客..</h1>
+	<div class="entry-content"><p>本文将详细介绍如何在Windows系统下搭建博客，并发布到GitHub Pages上，以及后期博客发布后的更新工作....</p>  <h4><strong><span style="font-family: 微软雅黑; font-size: large">一、博客整体效果</span></strong></h4>  <p><strong>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 搭建博客效果</strong>：<a href="http://www.sunfanwu.com/">http://www.sunfanwu.com/</a>（绑定域名后的效果，未绑定则调转到<a href="http://sunfanwu.github.com" target="_blank">sunfanwu.github.com</a>）</p>  <p><strong>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 网站成本：</strong>域名注册<a href="http://www.sunfanwu.com/" target="_blank">http://www.sunfanwu.com/</a> 50元（可不要）</p>  <p><strong>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 服&#160; 务 器：</strong>免费托管在GitHub个人主页上（无数据库，但有整个网站备份。由于GitHub网站性质，博客源码文档为所有人可见）。</p>  <p><strong>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 博客类型：</strong>静态博客，无数据库，博客通过html编写。</p>  <p><strong>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 本地软件：<a href="http://code.google.com/p/msysgit/downloads/list" target="_blank">msysgit</a>、<a href="http://rubyforge.org/frs/download.php/75127/rubyinstaller-1.9.2-p290.exe" target="_blank">ruby</a>、<a href="https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe" target="_blank">DevKit</a>、<a href="http://www.activestate.com/activepython/downloads">python</a>。</strong></p>  <p><strong>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 备&#160;&#160;&#160;&#160;&#160;&#160; 注：</strong>GitHub为开源项目网站，请不要上传过大的且无意义的附件（如视频等）。</p>  <h4><strong><span style="font-family: 微软雅黑; font-size: large">二、搭建本地环境</span></strong></h4>  <p>&#160;&#160;&#160;&#160;&#160;&#160; 为了在Github上使用Octopress，需要首先配置一下本地环境：</p>  <p>&#160;&#160;&#160;&#160;&#160;&#160; 安装Git，下载<a href="http://code.google.com/p/msysgit/downloads/list">msysgit</a>，安装可参考<a href="https://help.github.com/articles/set-up-git">官方文档</a>。（Git分布式版本管理系统，在此主要是用来操作GitHub。不推荐使用Git 客户端—github for windows）</p>  <p>&#160;&#160;&#160;&#160;&#160;&#160; 然后安装Ruby，<a href="http://octopress.org/docs/setup/"> Octopress 官方文档</a>中指定的 Ruby 版本是 1.9.2，下载 <a href="http://rubyforge.org/frs/download.php/75127/rubyinstaller-1.9.2-p290.exe">rubyinstaller-1.9.2-p290.exe</a>，安装时记得选中“Add Ruby executables to your PATH”。</p>  <p>&#160;&#160;&#160;&#160;&#160;&#160; 为了检查Git、ruby是否已加入到PATH中，可在 Windows 的cmd窗口中执行以下命令：</p>  <blockquote>   <p>path</p> </blockquote>  <p>&#160;&#160;&#160;&#160;&#160;&#160; 接着安装Devkit，选择下载 4.5.2 版本：<a href="https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe">DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe</a>，下载完成后，将其解压到如 E:DevKit，然后在win的cmd窗口中执行如下命令进行安装：</p>  <blockquote>   <p>E:      <br />cd E:DevKit       <br />ruby dk.rb init       <br />ruby dk.rb install</p> </blockquote>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; （选装）最后安装python，主要是博客代码加亮模块需要python环境的支持，<a href="http://www.activestate.com/activepython/downloads">下载2.7版</a>，安装完以后，在Windows的cmd窗口中执行：</p>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 本地环境配置结束。</p>  <h6><span style="font-family: 微软雅黑; font-size: large">三、更新本地环境配置</span></h6>  <p>&#160;</p>  <p>&#160;&#160;&#160;&#160;&#160;&#160; 为了支持中文UTF-8编码，对Windows环境变量配置如下：</p>  <p>&#160;</p>  <blockquote>   <p>LANG=zh_CN.UTF-8      <br />LC_ALL=zh_CN.UTF-8</p> </blockquote>  <p>&#160;&#160;&#160;&#160;&#160; 也可在直接在Windows的cmd窗口下运行命令：</p>  <blockquote>   <p>set LANG=zh_CN.UTF-8      <br />set LC_ALL=zh_CN.UTF-8</p> </blockquote>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; 更新gem的更新源，ruby的官方更新源经常被河蟹，换成国内的更新源，这样速度就快多了，变更如下：</p>  <blockquote>   <p>gem sources -a http://ruby.taobao.org/      <br />gem sources -r http://rubygems.org/       <br />gem sources -l</p> </blockquote>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; 最后一个命令可查看更改后的更新源列表。</p>  <h6><span style="font-family: 微软雅黑; font-size: large">四、下载并配置Octopress</span></h6>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; 首先下载Octopress源码，可以使用下面git命令（具体应用可参见git官方文档）下载，也可直接在Octopress Github库中下载octopress的zip包（<a href="https://nodeload.github.com/imathis/octopress/zipball/master">点击下载</a>），然后将下载的压缩包解压到E盘根目录，修改解压后的文件夹名称为 octopress。</p>  <blockquote>   <p>E:      <br />git clone git://github.com/imathis/octopress.git&#160; octopress</p> </blockquote>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 然后更新 Octopress 的gem更新源：进到 E:octopress 目录，用文本编辑器（例如记事本）打开文件Gemfile，将里面source “http://rubygems.org/”改为source “http://ruby.taobao.org/”。</p>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 最后安装Octopress的依赖项，在Windows的CMD窗口输入以下命令：</p>  <blockquote>   <p>E:      <br />cd octopress       <br />gem install bundler       <br />bundle install</p> </blockquote>  <h6><span style="font-family: 微软雅黑; font-size: large">五、新建Github Repositories</span></h6>  <p>&#160;&#160;&#160;&#160;&#160;&#160; 登录<a href="https://github.com/">Github</a>，假设你的用户名是username，首先要新建一个命名为 <strong>username.github.com </strong>的Repo，命名必须是这个格式，如果不这样命名的话，在运行命令 rake setup_github_pages&#160; 之后不能够自动创建后面提到的master和source 分支，而是作为普通仓库生成 gh-pages 分支。</p>  <p>&#160;&#160;&#160;&#160;&#160;&#160; 创建Repo（如果没用过GitHub，需先注册账户），如下图：</p>  <p><img style="display: block; float: none; margin-left: auto; margin-right: auto" alt="image" src="http://images.cnblogs.com/cnblogs_com/sunwufan/201210/201210161609515508.png" /></p>  <p>&#160;&#160;&#160;&#160;&#160;&#160; Repo的设置，如下图：</p>  <p>&#160;<img style="display: block; float: none; margin-left: auto; margin-right: auto" alt="20121016155745" src="http://images.cnblogs.com/cnblogs_com/sunwufan/201210/201210161609544032.jpg" /></p>  <h6><span style="font-family: 微软雅黑; font-size: large">六、发布Octopress到Github</span></h6>  <p>&#160;&#160;&#160;&#160;&#160;&#160; 1、打开Windows下的命令窗口，进入到Octopress所在的目录，输入命令：</p>  <blockquote>   <p>rake setup_github_pages</p> </blockquote>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; 按照提示输入刚才新建的Repo地址，类似：<a href="mailto:git@github.com:用户名/用户">git@github.com:用户名/用户</a><a href="mailto:git@github.com">名.github.com.git</a>。</p>  <p><img style="display: block; float: none; margin-left: auto; margin-right: auto" alt="在Github上搭建Octopress博客03" src="http://m2.img.libdd.com/farm5/149/4AE9EC3E86C5F7345502F3DE34FD2995_673_436.JPEG" /></p>  <p>&#160;&#160;&#160;&#160;&#160;&#160; 2、接着输入命令：</p>  <blockquote>   <p>rake install</p>    <p>rake generate</p>    <p>rake preview</p> </blockquote>  <p>&#160;&#160;&#160;&#160; 其中rake install是安装Octopress默认主题的，rake gnerate是生成静态页面的，这两个命令是必须运行的，而rake preview则是用来本地浏览的（运行时看屏幕上提示，按Ctrl+C并输入Y来终止批处理操作），运行后打开浏览器，输入 <a href="http://localhost:4000/">http://localhost:4000/</a> 就可以看到如下的界面了，不想预览的话也可以不运行，直接进入下一步。</p>  <p><img style="display: block; float: none; margin-left: auto; margin-right: auto" alt="在Github上搭建Octopress博客04" src="http://m3.img.libdd.com/farm4/151/1776232DF0DB15B299CE6ED32E52AA97_673_436.JPEG" /></p>  <p>&#160;&#160;&#160;&#160;&#160; 3、将博客发布到Github上，输入下面命令：</p>  <blockquote>   <p>rake deploy</p> </blockquote>  <p>&#160;&#160;&#160;&#160; <strong>备注：此处遇到错误，请看问题一。</strong></p>  <p>&#160;&#160;&#160;&#160; 这样，生成的内容将会自动发布到master分支，并且可以使用 <a href="http://用户名.github.com">http://<span style="color: #000000">用户名</span>.github.com</a> 访问内容。</p>  <p><img style="display: block; float: none; margin-left: auto; margin-right: auto" alt="在Github上搭建Octopress博客05" src="http://m2.img.libdd.com/farm5/94/CA535E9CF7D76A628C58F8EC287C225E_762_352.JPEG" /></p>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; 4、别忘了把所有源文件发布到 source 分支下面：</p>  <blockquote>   <p>git add .</p>    <p>git commit -m “your message”</p>    <p>git push origin source</p> </blockquote>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; 至此，所有发布完成，接下来就是对博客的设置了。</p>  <h6><span style="font-family: 微软雅黑; font-size: large">七、Ocotpress博客配置</span></h6>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 更改下面的配置后，还需要运行 rake generate、rake deploy等等命令的。</p>  <p>&#160;&#160;&#160;&#160;&#160; 1、默认的博客运行成功的话，就需要按照自己的要求对博客配置进行修改了，主要是修改Octopress根目录下的主配置文件_config.yml。</p>  <blockquote>   <p>url:&#160; http://username.github.com&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; # 博客地址</p>    <p>title:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; # 博客标题      <br />subtitle:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; # 副标题       <br />author:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; # 作者       <br />simple_search:&#160; http://www.google.com.hk/search&#160;&#160;&#160;&#160; # 搜索引擎       <br />description:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; # 关于博客的描述       <br />subscribe_rss:&#160; /atom.xml&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; # Rss订阅地址, 默认是&#160; /atom.xml       <br />subscribe_email:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; # 提供Email订阅的地址       <br />email:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; # Rss订阅的Email地址</p>    <p>root:&#160; /&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; # 博客路径，默认是“/“，如果你打算在子目录中，记得修改这个路径      <br />permalink: /blog/:year/:month/:day/:title/&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; # 文章的固定链接形式</p> </blockquote>  <p>&#160;&#160;&#160;&#160; 2、更换主题</p>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 主题位于 octopress/.theme 目录下，默认主题为 classic。 如果需要更改主题（可在网上查找），下载后将主题也放在.theme目录下即可，如果主题名字为blog_theme，那么安装主题时输入以下命令即可：</p>  <blockquote>   <p>rake install ['blog_theme']</p> </blockquote>  <h6><span style="font-family: 微软雅黑; font-size: large">八、绑定域名</span></h6>  <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; Github Pages绑定域名，需要在Octopress/source目录下建个无后缀的CNAME文本文件，文件内容就是你的域名，例如：</p>  <blockquote>   <pre>www.sunfanwu.com</pre>
+</blockquote>
+
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; 然后进入你的域名管理网站，修改A纪录为：“207.97.227.245” ，或者 CNAME 指向 username.github.com，下面就等着解析生效了。</p>
+
+<p><font size="4"><font face="微软雅黑"><strong>九、更新博客</strong><font size="2">（发布日志将在下一篇进行详细说明，敬请期待....）</font></font></font></p>
+
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; 由于每次写博客都通过html格式比较麻烦，所以此处推荐使用<a href="http://baike.baidu.com/view/1049077.htm">Windows Live Writer</a>本地编辑。</p>
+
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; 1.编辑完成，选择以“源代码”形式查看,复制文本。</p>
+
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; 2.在本地“octopress/public/blog/”找到需要更新的日志,通过记事本软件打开此html。</p>
+
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; 3.找到&lt;div class=&quot;entry-content&quot;&gt;&lt;/div&gt;，将复制的代码粘贴进去，保存关闭。</p>
+
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; 4.通过之前说过的“rake deploy”命令就可以发布了。（发布之前可“rake preview”本地查看一下~）</p>
+
+<p>&#160;&#160;&#160;&#160;&#160;&#160; <strong>备注：</strong>如有图片的话，一般做法还需将图片保存到对应文件夹。此处可以先在“博客园”等网站通过<a href="http://baike.baidu.com/view/1049077.htm">Windows Live Writer</a>发布博客，再将源码复制。即省去图片调用。又可做到一篇博客不同地方迅速发布，保留备份。</p>
+
+<p></p>
+
+<hr />
+
+<p></p>
+
+<p><strong><font size="4" face="微软雅黑">问题一：发布时git出现提示：</font></strong></p>
+
+<blockquote>
+  <pre>Agent admitted failure to sign using the key. Permission denied (publickey)<br /><br />fatal: The remote end hung up unexpectedly</pre>
+</blockquote>
+
+<p>&#160;&#160; github的<a href="http://help.github.com/linux-set-up-git/">官方文档</a></p>
+
+<blockquote>
+  <pre>#1. Check for SSH keys.
+$ cd ~/.ssh
+#2. Backup and remove existing SSH keys.
+$ lsLists all the subdirectories in the current directory
+$ mkdir key_backupmakes a subdirectory called &quot;key_backup&quot; in the current directory
+$ cp id_rsa* key_backupCopies the contents of the id_rsa directory into key_backup
+$ rm id_rsa*
+#3. Generate a new SSH key.
+$ ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;
+#4. Add your SSH key to GitHub.
+#5. Test everything out.
+$ ssh -T <a href="mailto:git@github.com">git@github.com</a></pre>
+</blockquote>
+
+<p>&#160;&#160;&#160;&#160; 大概意思就是你先在本地建立自己的SSH密码对，然后将公钥上传到github。进行上传服务时输入密码即可（cmd输入密码是为不可见状态，输入好后点击“回车”即可）。</p>
+
+<p></p>
+
+<hr />
+
+<p></p>
+
+<p>参考文章：</p>
+
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 教程参考： <a href="http://xuhehuan.com/783.html">http://xuhehuan.com/783.html</a> （80%为参考此处进行整理）。</p>
+
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <a title="http://mrzhang.me/blog/blog-equals-github-plus-octopress.html" href="http://mrzhang.me/blog/blog-equals-github-plus-octopress.html">http://mrzhang.me/blog/blog-equals-github-plus-octopress.html</a></p>
+
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <a title="http://caok.github.com/blog/2012/06/24/install-octopress-to-write-blog/" href="http://caok.github.com/blog/2012/06/24/install-octopress-to-write-blog/">http://caok.github.com/blog/2012/06/24/install-octopress-to-write-blog/</a></p>
+
+<p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; octopress官方建立github主页参考： <a title="http://octopress.org/docs/deploying/github/" href="http://octopress.org/docs/deploying/github/">http://octopress.org/docs/deploying/github/</a></p>
 </div>
 
 
@@ -22,7 +156,7 @@ single: true
   
 
 
-<time datetime="2012-10-16T19:13:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time></div>
+<time datetime="2012-10-16T10:09:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time></div>
 	<div class="tags">
 
 </div>
@@ -30,17 +164,51 @@ single: true
 </div></article>
 
 	<div class="share">
-	<div class="addthis_toolbox addthis_default_style ">
-	
-	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-	
-	
-	<a class="addthis_button_tweet"></a>
-	
-	
-	<a class="addthis_counter addthis_pill_style"></a>
-	</div>
+	<!-- JiaThis Button BEGIN -->
+<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?uid=1350065512423451&btn=r2.gif" charset="utf-8"></script>
+<!-- JiaThis Button END -->
   <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
 
+		<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread" data-thread-key="" 
+	data-title="" data-author-key="" data-url=""></div>
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"sunfanwu"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
+        
 
+</div>
+	<footer id="footer" class="inner"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F54094b085a504bdf5335165dcbcf2554' type='text/javascript'%3E%3C/script%3E"));
+</script>Copyright &copy; 2012
+
+    sunfanwu
+
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
