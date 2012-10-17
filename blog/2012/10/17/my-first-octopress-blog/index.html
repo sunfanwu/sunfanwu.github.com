@@ -1,0 +1,203 @@
+﻿
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>午饭</title>
+	<meta name="author" content="sunfanwu">
+
+	
+	<meta name="description" content="﻿&#8212;
+layout: post
+title: &#8220;搭建顶级域名下的个人博客网站&#8221;
+date: 2012-10-17 21:21
+comments: true categories: 顶级域名：godaddy买的，大概70元每年，经常有打折。（ &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="午饭" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">午饭</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:sunfanwu.github.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:sunfanwu.github.com">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner">
+<article class="post">
+	<h1 class="title">搭建顶级域名下的个人博客网站</h1>
+	<div class="entry-content"><p><font size="4" face="微软雅黑"><strong>一.前期准备</strong></font></p>
+
+<p>&#160;&#160;&#160; 顶级域名：godaddy买的，大概70元每年，经常有打折。（之前还在国内网站买过一个，后台体验不好）</p>
+
+<p>&#160;&#160;&#160; 国外主机：BlueHost，3.95$/m</p>
+
+<p>&#160;&#160;&#160; 备&#160;&#160;&#160;&#160; 注：由于BlueHost是通过域名作为唯一身份，注册及登录，并且成为主域名。所以最好在注册前想好要用的用户名，否则，之后想改的时候，只能联系客服了。</p>
+
+<p><strong><font size="4" face="微软雅黑">二.绑定在godaddy买的域名</font></strong></p>
+
+<p>&#160;&#160;&#160; 首先进入<a href="http://http://x.co/a9bl">godaddy.com</a>，然后登陆你的账号。点击“Domain Management”。</p>
+
+<p><img style="display: block; float: none; margin-left: auto; margin-right: auto" alt="image" src="http://images.cnblogs.com/cnblogs_com/sunwufan/201210/201210172110385222.png" /></p>
+
+<p>&#160;&#160;&#160;&#160; 跳转到如下图页面，选中要用的域名，点击如图所示位置进行设置。</p>
+
+<p>&#160;<img style="display: block; float: none; margin-left: auto; margin-right: auto" alt="image" src="http://images.cnblogs.com/cnblogs_com/sunwufan/201210/201210172110419941.png" /></p>
+
+<p>&#160;&#160;&#160;&#160; 对应位置输入“NS1.BLUEHOST.COM”，“NS2.BLUEHOST.COM”即可。如下图：</p>
+
+<p><img style="display: block; float: none; margin-left: auto; margin-right: auto" alt="image" src="http://images.cnblogs.com/cnblogs_com/sunwufan/201210/201210172110569752.png" /></p>
+
+<p>&#160;&#160; 此时域名解析已指向BlueHost。</p>
+
+<p><strong><font size="4" face="微软雅黑">三.安装WordPress</font></strong></p>
+
+<p>&#160;&#160;&#160; BlueHost提供了一键安装模式，十分方便。反而是之前测试时，本机搭建WordPress比较麻烦，要搭建Apache, MySQL, PHP 等。</p>
+
+<p>&#160;&#160;&#160; 登录BlueHost，在“cPanel”面板：</p>
+
+<p><img style="display: block; float: none; margin-left: auto; margin-right: auto" alt="image" src="http://images.cnblogs.com/cnblogs_com/sunwufan/201210/201210172111169623.png" /></p>
+
+<p>&#160;&#160;&#160;&#160; 点击“WordPress”图标，进入如图界面，按提示进行操作。（由于之前已经安装，所以下图会显示网址）：</p>
+
+<p><img style="display: block; float: none; margin-left: auto; margin-right: auto" alt="image" src="http://images.cnblogs.com/cnblogs_com/sunwufan/201210/201210172111261631.png" /></p>
+
+<p>&#160;&#160;&#160;&#160;&#160; 在如下页面，可设置安装路径。插件可根据个人情况进行安装。点击“Complete”进行一键安装，等待几分钟后，安装成功！</p>
+
+<p><img style="display: block; float: none; margin-left: auto; margin-right: auto" alt="image" src="http://images.cnblogs.com/cnblogs_com/sunwufan/201210/201210172111452616.png" /></p>
+
+<p><strong><font size="4" face="微软雅黑">四.WordPress维护</font></strong></p>
+
+<p>&#160;&#160;&#160;&#160;&#160; 完成后点击右上角“My Installs”。即可看到安装好的WordPress。点击“Admin Login&quot;,进入博客后台进行管理。WordPress根据登陆角色的不同，后台可选功能也将会不同。之后就是慢慢熟悉的过程，此外WordPress是开源的php框架，所以我们除了可以更换主题，增加插件外，还可以自行修改代码，使得博客更加好用。</p>
+
+<p>&#160;&#160;&#160;&#160;&#160;&#160; 在此推荐一个本地博客编辑软件”Windows Live Writer“，适合主流博客网站，可以一文多发，也可以抛弃卡顿在线编辑，省了不少麻烦。不过对于WordPress要进行设置，通过有管理员权限的账户登录后台，Settings-&gt;Writing中勾选：</p>
+
+<blockquote>
+  <p>XML-RPC Enable the WordPress, Movable Type, MetaWeblog and Blogger XML-RPC publishing protocols.</p>
+</blockquote>
+
+<p>&#160;&#160;&#160;&#160;&#160; <strong>接下来就请 Enjoy&#160; WordPress ！</strong></p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-17T19:13:00+08:00" pubdate data-updated="true">Oct 17<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+</div>
+	
+</div></article>
+
+	<div class="share">
+	<!-- JiaThis Button BEGIN -->
+<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?uid=1350065512423451&btn=r2.gif" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+		<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread" data-thread-key="" 
+	data-title="" data-author-key="" data-url=""></div>
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"sunfanwu"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
+        
+
+</div>
+	<footer id="footer" class="inner"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F54094b085a504bdf5335165dcbcf2554' type='text/javascript'%3E%3C/script%3E"));
+</script>Copyright &copy; 2012
+
+    sunfanwu
+
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

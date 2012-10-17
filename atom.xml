@@ -4,7 +4,7 @@
   <title><![CDATA[午饭]]></title>
   <link href="http://sunfanwu.github.com/atom.xml" rel="self"/>
   <link href="http://sunfanwu.github.com/"/>
-  <updated>2012-10-16T21:34:33+08:00</updated>
+  <updated>2012-10-17T21:53:45+08:00</updated>
   <id>http://sunfanwu.github.com/</id>
   <author>
     <name><![CDATA[sunfanwu]]></name>
@@ -14,11 +14,24 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Github上搭建Octopress博客]]></title>
-    <link href="http://sunfanwu.github.com/blog/2012/10/16/my-first-octopress-blog.markdown/"/>
-    <updated>2012-10-16T19:13:00+08:00</updated>
-    <id>http://sunfanwu.github.com/blog/2012/10/16/my-first-octopress-blog.markdown</id>
-    <content type="html"><![CDATA[]]></content>
+    <title type="html"><![CDATA[My First Octopress Blog]]></title>
+    <link href="http://sunfanwu.github.com/blog/2012/10/17/my-first-octopress-blog/"/>
+    <updated>2012-10-17T00:00:00+08:00</updated>
+    <id>http://sunfanwu.github.com/blog/2012/10/17/my-first-octopress-blog</id>
+    <content type="html"><![CDATA[<p>﻿&#8212;
+layout: post
+title: &#8220;搭建顶级域名下的个人博客网站&#8221;
+date: 2012-10-17 21:21
+comments: true</p>
+
+<h2>categories: </h2>
+
+<p>顶级域名：godaddy买的，大概70元每年，经常有打折。（之前还在国内网站买过一个，后台体验不好）</p>
+
+<p>国外主机：BlueHost，3.95$/m</p>
+
+<p>备        注：由于BlueHost是通过域名作为唯一身份，注册及登录，并且成为主域名。所以最好在注册前想好要用的用户名，否则，之后想改的时候，只能联系客服了。</p>
+]]></content>
   </entry>
   
   <entry>
